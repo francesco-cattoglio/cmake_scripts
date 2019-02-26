@@ -1,0 +1,4 @@
+cmake -DCMAKE_INSTALL_PREFIX=$CMAKE_INSTALL_PREFIX -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=false ..
+make -j4
+make install
+
