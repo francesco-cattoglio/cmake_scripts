@@ -11,5 +11,5 @@ git clone https://github.com/mosra/magnum-plugins.git && mkdir ./magnum-plugins/
 echo "Now cloning DCS, which might require your github account to access"
 git clone https://github.com/francesco-cattoglio/dcs.git && mkdir ./dcs/build
 
-echo "cloning done. Remember to ``export CMAKE_BUILDS_PREFIX=/path/for/cmake/installations/'' before running the scripts"
+echo "cloning done. Remember to '$env:CMAKE_BUILDS_PREFIX="/path/for/cmake/installations/"' before running the scripts"
 echo "suggested lib build order is: glfw, muparser, imgui, corrade, magnum, magnum-integration, magnum-plugins and finally dcs"
