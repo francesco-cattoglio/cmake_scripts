@@ -1,4 +1,5 @@
 cmake -DCMAKE_PREFIX_PATH=$CMAKE_BUILDS_PREFIX -DCMAKE_INSTALL_PREFIX=$CMAKE_BUILDS_PREFIX\
        -DCMAKE_OSX_DEPLOYMENT_TARGET=10.13\
-       -DCMAKE_BUILD_TYPE=Release ..
-cmake --build . --target install -- -j4
+       -DCMAKE_BUILD_TYPE=Release\
+       -G"Ninja" ..
+cmake --build . --target install 

@@ -12,4 +12,5 @@ echo "Now cloning DCS, which might require your github account to access"
 git clone https://github.com/francesco-cattoglio/dcs.git && mkdir ./dcs/build
 
 echo "cloning done. Remember to ``export CMAKE_BUILDS_PREFIX=/path/for/cmake/installations/'' before running the scripts"
-echo "suggested lib build order is: glfw, muparser, imgui, corrade, magnum, magnum-integration, magnum-plugins and finally dcs"
+echo "all the scripts require both cmake and ninja to build properly, make sure those are installed correctly before proceding"
+echo "suggested manual build order is: glfw, muparser, imgui, corrade, magnum, magnum-integration, magnum-plugins and finally dcs"
