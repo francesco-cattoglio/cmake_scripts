@@ -16,10 +16,10 @@ else
     $ret
 fi
 
-if [ -z DCS_BUILD_TYPE ]; then
+if [[ -n $DCS_BUILD_TYPE ]]; then
     echo "CMake build type will be set to $DCS_BUILD_TYPE"
 else
-    echo "Building as Debug, since no DCS_BUILD_TYPE variable was set"
+    echo "Building as Debug, since DCS_BUILD_TYPE variable was empty"
 fi
 
 echo "Building GLFW"
