@@ -16,29 +16,50 @@ else
     $ret
 fi
 
+if [ -z DCS_BUILD_TYPE ]; then
+    echo "CMake build type will be set to $DCS_BUILD_TYPE"
+else
+    echo "Building as Debug, since no DCS_BUILD_TYPE variable was set"
+fi
+
 echo "Building GLFW"
 cd glfw/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/glfw.sh
+
 echo "Building MuParser"
 cd ../../muparser_for_dcs/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/muparser.sh
+
 echo "Building IMGUI"
 cd ../../imgui_for_dcs/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/imgui.sh
+
 echo "Building Corrade"
 cd ../../corrade/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/corrade.sh
+
 echo "Building Magnum"
 cd ../../magnum/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/magnum.sh
+
 echo "Building Magnum-Integration"
 cd ../../magnum-integration/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/magnum-integration.sh
+
 echo "Building Magnum-Plugins"
 cd ../../magnum-plugins/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/magnum-plugins.sh
+
 echo "Building DCS"
 cd ../../dcs/build
+rm -f CMakeCache.txt
 . ../../cmake_scripts/dcs.sh
 cd ../..
 
